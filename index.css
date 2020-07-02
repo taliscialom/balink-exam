@@ -1,0 +1,356 @@
+/*catalogue.html*/
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: montserrat, sans serif;
+	color: #19160d;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+}
+
+.hamburger {
+	width: 26px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	display: none;
+	float: left;
+}
+
+.top {
+	background-color: #0d0a00;
+	background-repeat: repeat;
+	background-size: cover;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+ 	height: 37px;
+ 	position: relative;
+ 	align-content: center;
+
+}
+
+.top p {
+	color: #ffffff;
+	text-align: center;
+	font-family: Monteserrat Medium, sans serif;
+	padding-top: 11px;
+	margin: 0;
+}
+
+.icon {
+	background-color: #0d0a00;
+	background-repeat: repeat;
+	background-size: cover;
+	z-index: -1;
+	margin-top: 0px;
+	margin-right: 114px;
+	width: 100%;
+	height: 63px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: absolute;
+}
+
+.icon img {
+	margin-right: 9px;
+	margin-left: 9px;
+}
+
+.responsive_menu {
+	visibility: hidden;
+	display: none;
+}
+
+.logo {
+	float: left;
+	margin-left: 114px;
+}
+
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+
+nav li {
+	padding-top: 107px;
+	margin-right: 34px;
+}
+
+nav a {
+	font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.vente {
+	height: 290px;
+	width: 100%;
+	background-color: #fafafa;
+	padding: 0;
+
+}
+
+.vente h1{
+	padding-top: 64px
+}
+
+.vente p {
+	height: 108px;
+	width: 476px;
+	margin: auto;
+	font-family: 'Montserrat-Light', sans serif;
+	letter-spacing: 0.5px;
+	font-size: 16px;
+}
+
+.filter {
+	height: 48px;
+	text-transform: uppercase;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+
+.filtrer {
+	visibility: hidden;
+	display: none;
+}
+
+
+.filter p {
+	font-size: 11px;
+	margin-left: 99px;
+}
+
+.filter_choice {
+	margin-left: 208px;
+	flex: 1;
+}
+
+
+.filder_head {
+	flex: 2;
+}
+
+label {
+	visibility: hidden;
+	display: none;
+	text-align: right;
+}
+select {
+	border-color: transparent;
+	width: 89px;
+	height: 16px;
+	font-size: 12px;
+	text-align-last: right;
+	text-transform: uppercase;
+	background-color: white;
+}
+
+option {
+	font-size: 12px;
+	font-family: Monserrat-Medium, sans serif;
+	text-transform: uppercase
+}
+
+hr {
+	color: #d2d6d9;
+	height: 0.5px;
+}
+
+.under_filter {
+	display: flex;
+	align-items: center;
+}
+
+.title_filter {
+	flex: 2;
+}
+
+.filter_by {
+	margin-right: 208px;
+}
+
+#products_list {
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	margin-left: 10%;
+}
+
+.product {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: 414px;
+    height: 383px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+.product_description h1 {
+	color: #19160d;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.product_description h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 1.71;
+}
+
+.product_description h3 {
+	font-size: 14px;
+	color: #a7a7a7;
+}
+
+.product_description h4 {
+	font-size: 16px;
+    line-height: 1.88;
+	color: #1a1709;
+}
+
+
+@media only screen and (max-width: 1009px){
+	#page {
+		width: auto;
+	}
+
+	.top {
+		height: 31px;
+	}
+
+	.top p {
+		font-size: 10px;
+		font-weight: 500;
+	}
+
+	.icon {
+		background-color: #ffffff;
+		background-repeat: repeat;
+		background-size: cover;
+		height: 76px;
+		margin: 0;
+	}
+
+	.icon_no_responsive {
+		visibility: hidden;
+		display: none;
+	}
+
+	.icon_responsive {
+		visibility: initial;
+		display: block;
+	}
+
+
+	.logo {
+		float: none;
+		display: none;
+		height: 61px;
+		width: 45px;
+	}
+
+	.hamburger {
+		display: block;
+		cursor: pointer;
+		float: left;
+		margin: 30px 17px;
+	}
+
+	.hamburger:checked + nav li {
+		display: block;
+	}
+
+	.responsive {
+		visibility: initial;
+		display: block;
+	}
+
+	.responsive_menu {
+		visibility: initial;
+		display: inline-block;
+	}
+
+	nav ul {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+
+	}
+
+	nav li {
+		width: auto;
+		padding-top: 10px;
+		margin: 0;
+		display: none;
+	}
+
+	nav a {
+		display: block;
+		margin: 0;
+		text-align: left;
+	}
+
+	.vente p {
+		width: 311px;
+		height: 105px;
+
+	}
+
+	hr {
+		visibility: hidden;
+		display: none;
+	}
+
+	.filtrer {
+		visibility: initial;
+		display: block;
+		width: 163px;
+		height: 43px;
+		border-radius: 4px;
+		border: solid 1px #969696;
+		text-align: center;
+	}
+
+	.filter_head,.filter_choice {
+		visibility: hidden;
+		display: none;
+	}
+
+	.filter_responsive {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 980 ){
