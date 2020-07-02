@@ -18,6 +18,10 @@ header {
 	flex-direction: column;
 }
 
+.nav_icon {
+	padding-right: 125px;
+}
+
 .hamburger {
 	width: 26px;
 	margin: 0 0 0 10px;
@@ -32,7 +36,6 @@ header {
 	background-size: cover;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	width: 100%;
  	height: 37px;
  	position: relative;
  	align-content: center;
@@ -42,9 +45,10 @@ header {
 .top p {
 	color: #ffffff;
 	text-align: center;
-	font-family: Monteserrat Medium, sans serif;
 	padding-top: 11px;
 	margin: 0;
+	font-size: 11px;
+
 }
 
 .icon {
@@ -52,19 +56,27 @@ header {
 	background-repeat: repeat;
 	background-size: cover;
 	z-index: -1;
-	margin-top: 0px;
-	margin-right: 114px;
 	width: 100%;
+	height: 63px;
+	position: absolute;
+}
+
+.nav_icon {
+	padding-right: 114px;
 	height: 63px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	position: absolute;
 }
 
 .icon img {
 	margin-right: 9px;
 	margin-left: 9px;
+}
+
+.icon_responsive {
+	visibility: hidden;
+	display: none;
 }
 
 .responsive_menu {
@@ -95,25 +107,27 @@ nav a {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
+    color: #19160d;
 }
 
 .vente {
 	height: 290px;
-	width: 100%;
 	background-color: #fafafa;
 	padding: 0;
+	position: relative;
 
 }
 
 .vente h1{
-	padding-top: 64px
+	padding-top: 69px
+
 }
 
 .vente p {
 	height: 108px;
 	width: 476px;
 	margin: auto;
-	font-family: 'Montserrat-Light', sans serif;
+	line-height: 27px;
 	letter-spacing: 0.5px;
 	font-size: 16px;
 }
@@ -121,12 +135,26 @@ nav a {
 .filter {
 	height: 48px;
 	text-transform: uppercase;
-	display: flex;
-	align-content: center;
-	align-items: center;
+
 }
 
 .filtrer {
+	visibility: hidden;
+	display: none;
+
+}
+.filter_flex {
+	display: flex;
+	align-items: center;
+	height: 59px;
+}
+
+.filter_responsive {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 15px;
+	margin-bottom: 50px;
 	visibility: hidden;
 	display: none;
 }
@@ -138,13 +166,13 @@ nav a {
 }
 
 .filter_choice {
-	margin-left: 208px;
-	flex: 1;
+	margin-right: 176px;
+	flex: 2;
 }
 
 
-.filder_head {
-	flex: 2;
+.filter_head {
+	flex: 1;
 }
 
 label {
@@ -183,34 +211,48 @@ hr {
 }
 
 .filter_by {
-	margin-right: 208px;
+	margin-right: 176px;
 }
 
-#products_list {
-	height: auto;
+.products_list {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-content: center;
+	justify-content: space-around;
 	align-items: center;
-	margin-left: 10%;
+
 }
 
 .product {
 	display: flex;
-	align-content: center;
+	justify-content: space-around;
 	align-items: center;
 	width: 414px;
     height: 383px;
     text-align: center;
     margin-top: 28px;
+    position: relative;
+}
+
+.product_description_flex {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.like {
+	height: 10px;
+	width: 10px;
+	margin-bottom: 35px;
+	position: relative;
 }
 
 .product_description h1 {
 	color: #19160d;
 	text-transform: uppercase;
-	font-size: 11px;
+	font-size: 10px;
+	font-weight: normal;
 }
 
 .product_description h2 {
@@ -218,17 +260,20 @@ hr {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 1.71;
+	font-weight: 600;
 }
 
 .product_description h3 {
 	font-size: 14px;
 	color: #a7a7a7;
+	font-weight: 300;
 }
 
 .product_description h4 {
 	font-size: 16px;
     line-height: 1.88;
 	color: #1a1709;
+	font-weight: normal;
 }
 
 
@@ -264,23 +309,27 @@ hr {
 		display: block;
 	}
 
+	.nav_icon {
+		padding-right: 15px;
+	}
+
 
 	.logo {
 		float: none;
 		display: none;
-		height: 61px;
-		width: 45px;
 	}
 
 	.hamburger {
 		display: block;
 		cursor: pointer;
 		float: left;
-		margin: 30px 17px;
+		margin: 26px 17px;
+		position: absolute;
 	}
 
 	.hamburger:checked + nav li {
 		display: block;
+		visibility: initial;
 	}
 
 	.responsive {
@@ -288,9 +337,20 @@ hr {
 		display: block;
 	}
 
+
 	.responsive_menu {
 		visibility: initial;
-		display: inline-block;
+		display: block;
+		margin: auto;
+	}
+
+	.search {
+		float: left;
+		padding-left: 58px;
+	}
+
+	.logo_responsive {
+		height: 76px;
 	}
 
 	nav ul {
@@ -298,7 +358,6 @@ hr {
 		display: flex;
 		flex-direction: column;
 		margin: 0;
-
 	}
 
 	nav li {
@@ -314,10 +373,20 @@ hr {
 		text-align: left;
 	}
 
+	.vente {
+		height: 221px;
+	}
+
+	.vente h1 {
+		margin: 0px;
+		padding-top: 41px;
+		font-size: 18px;
+	}
+
 	.vente p {
 		width: 311px;
 		height: 105px;
-
+		font-size: 13px;
 	}
 
 	hr {
@@ -327,30 +396,23 @@ hr {
 
 	.filtrer {
 		visibility: initial;
-		display: block;
+		display: inline-block;
 		width: 163px;
 		height: 43px;
 		border-radius: 4px;
 		border: solid 1px #969696;
-		text-align: center;
-	}
-
-	.filter_head,.filter_choice {
-		visibility: hidden;
-		display: none;
+		text-align-last: center;
 	}
 
 	.filter_responsive {
 		display: flex;
+		justify-content: space-around;
 		align-items: center;
-		align-content: center;
 	}
 
-
-
-
-
+	.filter_head,.filter_choice, .under_filter {
+		visibility: hidden;
+		display: none;
+	}
 
 }
-
-@media screen and (max-width: 980 ){
